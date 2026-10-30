@@ -5,6 +5,11 @@ on:
   schedule:
     - cron: "0 0 * * *"   # UTC 00:00 = 한국 09:00
   workflow_dispatch:       # Actions 탭에서 손으로도 실행할 수 있다
+    inputs:
+      refresh_promos:
+        description: "저장된 혜택을 무시하고 공지를 새로 읽기"
+        type: boolean
+        default: false
 
 permissions:
   contents: write
@@ -41,7 +46,7 @@ jobs:
           python -m playwright install --with-deps chromium
 
       - name: 에이전트 실행
-        run: python run.py --site _site
+        run: python run.py --site _site ${{ inputs.refresh_promos && '--refresh-promos' || '' }}
 
       - name: 실행 기록 저장 (data/)
         run: |
