@@ -1,0 +1,66 @@
+# 매일 오전 9시(한국 시간) 에이전트를 돌리고, 결과를 GitHub Pages 웹 페이지로 올리고, 텔레그램으로 알린다.
+name: daily-remit-compare
+
+on:
+  schedule:
+    - cron: "0 0 * * *"   # UTC 00:00 = 한국 09:00
+  workflow_dispatch:       # Actions 탭에서 손으로도 실행할 수 있다
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: daily-remit-compare
+  cancel-in-progress: false
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    env:
+      TZ: Asia/Seoul
+      GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+      TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+      TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+      SITE_URL: https://ozoda798305-bot.github.io/remit-compare/
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: 한글·이모지 글꼴 설치 (카드·PDF용)
+        run: sudo apt-get update -q && sudo apt-get install -y -q fonts-noto-cjk fonts-noto-color-emoji
+
+      - name: 패키지 설치
+        run: |
+          pip install -r requirements.txt
+          python -m playwright install --with-deps chromium
+
+      - name: 에이전트 실행
+        run: python run.py --site _site
+
+      - name: 실행 기록 저장 (data/)
+        run: |
+          git config user.name "remit-compare-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add data/history.csv data/promotions.json
+          git commit -m "daily run $(date +%F)" || echo "바뀐 기록 없음"
+          git push
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+
+  deploy:
+    needs: run
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

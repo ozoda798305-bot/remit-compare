@@ -1,0 +1,23 @@
+{
+  "amount_krw": 1000000,
+  "corridor": "KR->UZ",
+  "payout": "card",
+  "my_provider": "GME",
+  "sends_per_month": 1,
+  "providers": ["hanpass", "e9pay", "gme", "gmoney", "hana"],
+  "promo_refresh_hours": 24,
+  "site_url": "https://ozoda798305-bot.github.io/remit-compare/",
+  "check": {
+    "max_above_mid_pct": 0.5,
+    "max_below_mid_pct": 10.0,
+    "max_day_change_pct": 5.0
+  },
+  "hana_estimate": {
+    "_note": "하나은행 해외송금 약관(입금액 - 송금수수료 - 전신료, 전신환매도율 적용) 기준 추정. 수수료·스프레드 값은 가정값이며 공시 확인 후 고친다.",
+    "remit_fee_krw": 10000,
+    "cable_fee_krw": 5000,
+    "tts_spread_pct": 1.0,
+    "intermediary_fee_usd": 15,
+    "uz_bank_spread_pct": 1.0
+  }
+}

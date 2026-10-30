@@ -1,0 +1,78 @@
+{
+ "scanned_at": "2026-10-30T02:23:07",
+ "model": "gemini-3.1-flash-lite",
+ "promotions": [
+  {
+   "title": "Send Now, Fly Free",
+   "type": "event",
+   "benefit": "송금 시 항공권 관련 경품을 제공하는 이벤트입니다.",
+   "value_krw": null,
+   "conditions": "2026년 10월 31일까지 진행되는 이벤트입니다.",
+   "new_customer_only": null,
+   "uzbekistan": true,
+   "valid_until": "2026-10-31",
+   "evidence": "Send Now, Fly Free Muddat | 2026.09.01 ~ 2026.10.31",
+   "provider": "한패스",
+   "source_url": "https://www.hanpass.com/uz/event",
+   "is_new": false
+  }
+ ],
+ "rejected": [
+  {
+   "title": "추석 맞이 현장 등록 이벤트",
+   "type": "fee_free",
+   "benefit": "현장에서 E9pay 앱에 신규 등록 시 수수료 없이 송금할 수 있는 기회를 제공합니다.",
+   "value_krw": null,
+   "conditions": "2025년 10월 3일~4일(거제) 또는 5일~7일(김해) 현장 방문하여 등록해야 함.",
+   "new_customer_only": true,
+   "uzbekistan": true,
+   "valid_until": "2025-10-07",
+   "evidence": "Shuningdek, bir necha marta komissiyasiz o‘tkazma qilish imkoniyati ham beriladi.",
+   "provider": "E9pay",
+   "source_url": "https://t.me/s/e9payuz",
+   "reason": "이미 끝난 혜택"
+  },
+  {
+   "title": "추석 맞이 현장 방문 이벤트",
+   "type": "fee_free",
+   "benefit": "현장에서 E9pay 앱에 신규 등록 시 수수료 없이 송금할 수 있는 기회를 제공합니다.",
+   "value_krw": null,
+   "conditions": "2025년 10월 3일~4일(거제) 또는 10월 5일~7일(김해) 현장 방문하여 등록해야 함.",
+   "new_customer_only": true,
+   "uzbekistan": true,
+   "valid_until": "2025-10-07",
+   "evidence": "Shuningdek, bir necha marta komissiyasiz o‘tkazma qilish imkoniyati ham beriladi.",
+   "provider": "E9pay",
+   "source_url": "https://t.me/s/e9pay_uzbekistan",
+   "reason": "이미 끝난 혜택"
+  }
+ ],
+ "errors": [],
+ "sources": [
+  {
+   "provider": "한패스",
+   "url": "https://www.hanpass.com/uz/event"
+  },
+  {
+   "provider": "한패스",
+   "url": "https://www.hanpass.com/uz/notice"
+  },
+  {
+   "provider": "GME",
+   "url": "https://www.gmeremit.com/board/notice"
+  },
+  {
+   "provider": "G-Money",
+   "url": "https://gmoneytrans.com/notice/"
+  },
+  {
+   "provider": "E9pay",
+   "url": "https://t.me/s/e9payuz"
+  },
+  {
+   "provider": "E9pay",
+   "url": "https://t.me/s/e9pay_uzbekistan"
+  }
+ ],
+ "from_cache": false
+}
