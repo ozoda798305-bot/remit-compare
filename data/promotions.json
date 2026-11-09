@@ -1,8 +1,23 @@
 {
- "scanned_at": "2026-11-08T09:58:05",
- "model": "gemini-3.5-flash",
+ "scanned_at": "2026-11-09T10:00:13",
+ "model": "gemini-3.1-flash-lite",
  "promotions": [],
- "rejected": [],
+ "rejected": [
+  {
+   "title": "추석 맞이 E9pay 현장 이벤트",
+   "type": "fee_free",
+   "benefit": "현장 등록 시 수수료 없이 송금할 수 있는 기회를 제공합니다.",
+   "value_krw": null,
+   "conditions": "2025년 10월 3일~4일(거제), 10월 5일~7일(김해) 현장 방문 및 등록 시",
+   "new_customer_only": true,
+   "uzbekistan": true,
+   "valid_until": "2025-10-07",
+   "evidence": "Shuningdek, bir necha marta komissiyasiz o‘tkazma qilish imkoniyati ham beriladi.",
+   "provider": "E9pay",
+   "source_url": "https://t.me/s/e9pay_uzbekistan",
+   "reason": "이미 끝난 혜택"
+  }
+ ],
  "errors": [],
  "sources": [
   {
