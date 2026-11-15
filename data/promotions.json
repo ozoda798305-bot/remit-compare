@@ -1,23 +1,8 @@
 {
- "scanned_at": "2026-11-14T15:05:33",
- "model": "gemini-3.1-flash-lite",
+ "scanned_at": "2026-11-15T15:08:54",
+ "model": "gemini-3.5-flash",
  "promotions": [],
- "rejected": [
-  {
-   "title": "Chuseok bayrami munosabati bilan E9PAY sovg'alari",
-   "type": "fee_free",
-   "benefit": "E9pay ilovasiga ro'yxatdan o'tganlarga bir necha marta komissiyasiz o'tkazma qilish imkoniyati beriladi.",
-   "value_krw": null,
-   "conditions": "3-4 oktabr Kojedo yoki 5-7 oktabr Kimhe shaharlaridagi E9pay tadbirida ro'yxatdan o'tish.",
-   "new_customer_only": true,
-   "uzbekistan": true,
-   "valid_until": "2025-10-07",
-   "evidence": "Shuningdek, bir necha marta komissiyasiz o'tkazma qilish imkoniyati ham beriladi.",
-   "provider": "E9pay",
-   "source_url": "https://t.me/s/e9pay_uzbekistan",
-   "reason": "근거 문장이 원문에 없음(AI가 지어냈을 수 있음)"
-  }
- ],
+ "rejected": [],
  "errors": [],
  "sources": [
   {
